@@ -1,11 +1,12 @@
 {
   "name": "wheelbarrow",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Request Library",
   "main": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel lib/ --out-file build/app.js"
+    "build": "rm -rf build/* && babel lib/ --out-dir build/",
+    "prepublish": "npm run build"
   },
   "author": "Kyle Mendes <web@fuzzproductions.com> (http://www.fuzz.pro)",
   "license": "MIT",

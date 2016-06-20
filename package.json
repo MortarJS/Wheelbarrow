@@ -1,17 +1,20 @@
 {
   "name": "wheelbarrow",
-  "version": "0.0.1",
-  "description": "MortarJS Request Library",
-  "main": "app.js",
+  "version": "0.0.3",
+  "description": "React Request Library",
+  "main": "build/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel lib/ --out-file build/app.js"
   },
-  "author": "Kyle Mendes",
+  "author": "Kyle Mendes <web@fuzzproductions.com> (http://www.fuzz.pro)",
   "license": "MIT",
   "dependencies": {
     "reqwest": "^2.0.5"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
   }

@@ -1,6 +1,6 @@
 {
   "name": "wheelbarrow",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "React Request Library",
   "main": "build/Wheelbarrow.js",
   "scripts": {

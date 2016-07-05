@@ -1,0 +1,10 @@
+dir: lib
+
+packageJson: package.json
+
+branches:
+  - master
+  - dev
+
+articles:
+  - Overview: README.md

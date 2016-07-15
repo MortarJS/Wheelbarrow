@@ -33,6 +33,8 @@ actions = {
 
   "put": [ "<COLLECTION>_PUT", "<COLLECTION>_PUT_BY_ID" ],
 
+  "patch": ["<COLLECTION>_PATCHED_BY_ID" ],
+
   "delete": [ "<COLLECTION>_DELETED", "<COLLECTION>_DELETED_BY_ID" ],
 }
 ```

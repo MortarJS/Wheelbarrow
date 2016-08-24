@@ -6,9 +6,6 @@ describe('MagicBoxHandler', () => {
 	let magicBox = new MagicBox(),
 		url      = 'api.com/users';
 
-	let beforeRequest = function() {
-	};
-
 	beforeEach(() => {
 	});
 
@@ -24,7 +21,6 @@ describe('MagicBoxHandler', () => {
 				};
 
 				let request = magicBox._setUrlModifiers(url, options);
-
 				expect(request).to.equal(`${url}?include[]=pets`);
 			});
 
@@ -43,7 +39,6 @@ describe('MagicBoxHandler', () => {
 				};
 
 				let request = magicBox._setUrlModifiers(url, options);
-
 				expect(request).to.equal(`${url}?include[]=pets&include[]=children`);
 			});
 
@@ -51,8 +46,8 @@ describe('MagicBoxHandler', () => {
 				let options = {
 					modifiers: {
 						include: {
-							collection: 'pets',
-							include: {
+							collection : 'pets',
+							include    : {
 								collection: 'food'
 							}
 						}
@@ -60,8 +55,31 @@ describe('MagicBoxHandler', () => {
 				};
 
 				let request = magicBox._setUrlModifiers(url, options);
-
 				expect(request).to.equal(`${url}?include[]=pets.food`);
+			});
+
+			it('can deep include a multiple relations', () => {
+				let options = {
+					modifiers: {
+						include: [
+							{
+								collection: 'pets',
+								include: {
+									collection: 'food'
+								}
+							},
+							{
+								collection: 'children',
+								include: {
+									collection: 'friends'
+								}
+							}
+						]
+					}
+				};
+
+				let request = magicBox._setUrlModifiers(url, options);
+				expect(request).to.equal(`${url}?include[]=pets.food&include[]=children.friends`);
 			});
 		});
 	});

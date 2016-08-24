@@ -24,7 +24,7 @@
   "rules": {
     "comma-dangle": [2, "never"],                // disallow trailing commas in object literals
     "no-cond-assign": 1,                         // disallow assignment in conditional expressions
-    "no-console": [1, {allow: ['error', warn]}], // disallow use of console (off by default in the node environment)
+    "no-console": [0, {allow: ['error', warn]}], // disallow use of console (off by default in the node environment)
     "no-constant-condition": 0,                  // disallow use of constant expressions in conditions
     "no-control-regex": 0,                       // disallow control characters in regular expressions
     "no-debugger": 1,                            // disallow use of debugger
@@ -154,9 +154,15 @@
             "beforeColon": false,
             "afterColon": true
         },
-        "multiLine": {
-            "align": "colon",                      // Enforces that objects align on the colon.  Breaks for the longest object.
-            "mode": "minimum"
+	"multiLine": {
+            "mode": "minimum",
+            "beforeColon": false,
+            "afterColon": true,
+            "align": {
+                "on": "colon",
+                "beforeColon": true,
+                "afterColon": true
+            }
         }
     }],
     "keyword-spacing": 2,                          // require a space after keywords

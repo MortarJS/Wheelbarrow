@@ -4,7 +4,7 @@
   "description": "React Request Library",
   "main": "build/Wheelbarrow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc --require babel-core/register mocha test/**/*.js",
     "build": "rm -rf build/* && babel lib/ --out-dir build/",
     "prepublish": "npm run build"
   },
@@ -15,9 +15,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
+    "babel-core": "^6.13.2",
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
+    "nyc": "^8.1.0",
     "xhr2": "^0.1.3"
   }
 }

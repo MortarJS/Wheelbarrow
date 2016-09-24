@@ -1,4 +1,4 @@
-#Wheelbarrow JS -- A React Request Library
+#Wheelbarrow JS -- A React Request Library [![Slack Status](https://fuzz-opensource.herokuapp.com/badge.svg)](https://fuzz-opensource.herokuapp.com/)
 
 ### Installation
 

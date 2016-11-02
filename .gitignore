@@ -4,5 +4,4 @@ npm-debug.log*
 *.log
 *.md.html
 
-build
 coverage

@@ -4,7 +4,7 @@
   "description": "React Request Library",
   "main": "build/Wheelbarrow.js",
   "scripts": {
-    "test": "nyc --require babel-core/register mocha test/**/*.js",
+    "test": "npm run build && nyc --require babel-core/register mocha test/**/*.js",
     "report": "nyc -r html --require babel-core/register mocha ./test/**/*.js",
     "coverage": "nyc --reporter=text-lcov --require babel-core/register mocha test/**/*.js | coveralls",
     "build": "rm -rf build/* && babel lib/ --out-dir build/",
